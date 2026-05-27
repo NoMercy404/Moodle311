@@ -1,0 +1,39 @@
+# Swap files (vim)
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Temporary files and logs
+*~
+error_log
+
+# Core configurations and databases
+/config.php
+/tags
+/TAGS
+/cscope.*
+
+# Cache, Sessions, and PHPUnit data
+/.phpunit.result.cache
+phpunit.xml
+
+# IDE and Project files
+/.patches/
+/.idea/
+.phpstorm.*
+!/.phpstorm.meta.php/
+/.phpstorm.meta.php/*
+!/.phpstorm.meta.php/di.php
+/nbproject/
+CVS
+.DS_Store
+/.settings/
+/.project
+/.buildpath
+/.cache
+
+# Composer
+/vendor/
+composer.lock

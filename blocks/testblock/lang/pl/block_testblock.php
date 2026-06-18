@@ -34,3 +34,6 @@ $string['newhtmlblock'] = '(nowy testowy blok)';
 $string['pluginname'] = 'TEST BLOK';
 $string['search:content'] = 'zawartosc bloku HTML';
 $string['privacy:metadata:block'] = 'ten blok przechowuje wszystkie potrzebne dla siebie dane w obrebie tego bloku.';
+$string['testblock_wyswietl_userow'] = 'Wyświetl użytkowników';
+$string['testblock_wyswietl_userow_opis'] = 'Zaznaczając tą opcje pozwalasz by w test blocku wyświetlana była lista użytkowników a nie lista kursów';
+

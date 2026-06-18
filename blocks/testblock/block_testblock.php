@@ -29,6 +29,11 @@ class block_testblock extends block_base
         $this->title = get_string('pluginname', 'block_testblock');
     }
 
+    function has_config()
+    {
+        return true;
+    }
+
     function get_content(){
         global $DB;
 
@@ -36,15 +41,25 @@ class block_testblock extends block_base
             return $this->content;
         }
 
-        $userstring = '';
-        $users = $DB->get_records('user');
-        foreach($users as $user){
-            $userstring .= $user->firstname . ' ' . $user->lastname . '<br>';
+        $content = '';
 
+        $show_users = get_config('block_testblock', 'wyswietl_userow');
+        if($show_users){
+            $users = $DB->get_records('user');
+            foreach($users as $user) {
+                $content .= $user->firstname . ' ' . $user->lastname . '<br>';
+            }
         }
+        else{
+            $courses = $DB->get_records('course');
+            foreach($courses as $course) {
+                $content .= $course->fullname . ' ' . $course->shortname . '<br>';
+            }
+        }
+
         $this->content = new stdClass;
-        $this->content->text = $userstring;
-        $this->content->footer = 'this is the footer';
+        $this->content->text = $content;
+        $this->content->footer = 'Block Footer';
         return $this->content;
     }
 }

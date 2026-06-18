@@ -34,3 +34,5 @@ $string['testblock'] = '(new HTML block)';
 $string['pluginname'] = 'TESTBLOCK';
 $string['search:content'] = 'HTML block content';
 $string['privacy:metadata:block'] = 'The HTML block stores all of its data within the block subsystem.';
+$string['testblock_wyswietl_userow'] = 'Display users';
+$string['testblock_wyswietl_userow_opis'] = 'Clicking on this option allow test block to display list of users instead of block list';
